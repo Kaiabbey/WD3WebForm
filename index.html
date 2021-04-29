@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Flex</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="js.js" defer></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    </head>
+    <body>
+        <header></header>
+        <section>
+            <form>
+                <label>First Name</label>
+                <input type="text" pattern="[a-zA-Z-'--]{2,}" placeholder="First Name" oninput="validitycheck(this)">
+                <label>Last Name</label>
+                <input type="text" pattern="[a-zA-Z-'--]{2,}" placeholder="Last Name" oninput="validitycheck(this)">
+                <label>Email</label>
+                <input type="text" pattern=".+@.+[.].+" placeholder="Email" oninput="Emailvaliditycheck(this)">
+                <label>Phone Number</label>
+                <input type="number" pattern="[0-9]{8,10}" placeholder="Phone Number" oninput="Phvaliditycheck(this)">
+                <label>Organisation</label>
+                <input type="text" placeholder="Organisation">
+                <label>Message</label>
+                <input class="message" type="text" placeholder="Message">
+                <label>Subject</label>
+                <input type="text" placeholder="Subject">
+                <input type="Submit">
+            </form>
+        </section>
+    </body>
+</html>
