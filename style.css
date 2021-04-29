@@ -1,29 +1,39 @@
 body{
-    background-color: #3f3f3f;
+    background: rgb(9,9,121);
+    background: linear-gradient(128deg, rgba(9,9,121,1) 30%, rgba(0,212,255,1) 72%);
     padding: 0px;
     margin: 0px;
     display: grid;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: auto 600px auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 33vw 34vw 33vw;
 }   
 
 header{
-    height: 70px;
-    background-color: #15B4FE;
+    height: 150px;
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
-    filter: drop-shadow(4px 4px 4px);
+    filter: drop-shadow(0px 15px 15px);
+    position: fixed;
+    margin: 10px;
+}
+
+section:hover + video{
+    display: block;
+}
+
+img{
+    height: 100%;
+    filter: drop-shadow(5px 5px 5px);
 }
 
 section{
-    min-height: 100vh;
-    width: fit-content;
-    background-color: #49e4ff5d;
+    width: 34vw;
+    background-color: #3b6f79a2;
     font-size: xx-large;
-    padding: 50px;
-    margin-top: 60px;
+    padding: 40px;
+    margin-bottom: 60px;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
@@ -40,16 +50,25 @@ input{
     font-size: 100%;
     background-color: #36555a75;
     outline: none;
+    color: whitesmoke;
 }
 
 .message{
     font-size: 70%;
     height: 140px;
+    margin: 5px 0 30px 10%;
+    width: 80%;
+    border-radius: 10px;
+    border: solid black 2px;
+    font-size: 100%;
+    background-color: #36555a75;
+    outline: none;
+    color: whitesmoke;
 }
 
 form{
     display: block;
-    width: 500px;
+    width: 100%;
 
 }
 
@@ -57,8 +76,87 @@ label{
     display: block;
 }
 
+footer{
+    height: 150px;
+    padding-top: 150px;
+    background-color: #0b2a3f;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.flexbox{
+    display: flex;
+    height: fit-content;
+}
+
+p{
+    font-size: x-large;
+    margin: 3px 0 0 5px;
+}
+
+video{
+    position: absolute;
+    left: 10px;
+    top:1080px;
+    margin: 0;
+    padding: 0;
+    display: none;
+    filter: drop-shadow(8px 13px 9px);
+}
+
 @media only screen and (max-width:450px) {
     body {
       background-color: red;
+      grid-template-columns: auto auto auto;
     }
+
+    label{
+        display: none;
+    }
+
+    header{
+        height: 50px;
+        background-color: slateblue;
+    }
+    
+    img{
+        display: none;
+    }
+    
+    section{
+        width: 100vw;
+        padding: 0;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   }
