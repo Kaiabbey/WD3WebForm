@@ -10,7 +10,7 @@
     <body>
         <header></header>
             <img src="PHEMLOGO.svg" alt="phem logo">
-            <h1>PHEM</h1>
+            <h1></h1>
         </header>
         <section>
             <form onsubmit="return ValidateForm()">
@@ -24,26 +24,23 @@
                 <input type="text" pattern=".+@.+[.].+" id="emailinput" placeholder="Email" oninput="Emailvaliditycheck(this)" required>
                 <div class="Error" id="email"></div>
                 <label>Phone Number</label>
-                <input type="number" pattern="[0-9]{8,10}" id="ph" placeholder="Phone Number" oninput="Phvaliditycheck(this)" required>
+                <input type="number" pattern="[0-9]{8,10}" id="ph" placeholder="Phone Number" oninput="phvaliditycheck(this)" required>
                 <div class="Error" id="phone"></div>
                 <label>Organisation</label>
-                <input type="text" placeholder="Organisation" id="org" required>
+                <input type="text" placeholder="Organisation" id="org" oninput="validitycheck(this)" required>
                 <div class="Error" id="organisation"></div>
                 <label>Message</label>
-                <textarea class="message" placeholder="Message" id="msg" required></textarea>
+                <textarea class="message" placeholder="Message" id="msg" oninput="validitycheck(this)" required></textarea>
                 <div class="Error" id="message"></div>
-                <label>Subject</label>
+                <label class="notreq">Subject</label>
                 <input type="text" placeholder="Subject" class="subject">
-                <input type="Submit">
+                <input class="Submitbutton" type="Submit">
             </form>
         </section>
         <video width="320" height="240" autoplay muted loop>
             <source src="WIN_20210429_20_51_04_Pro.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <div class="kailogo">
-            <div>KA</div>
-        </div>
         <footer>
             <div class="copyright">
                 <i class="far fa-copyright"></i>
@@ -62,6 +59,9 @@
                 <i class="fas fa-phone" style="font-size: xx-large;"></i>
                 <p>: 0484698625</p>
             </div> 
+            <div class="kailogo">
+                <div>KA</div>
+            </div>
         </footer>
     </body>
 </html>

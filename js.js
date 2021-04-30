@@ -13,6 +13,22 @@ function validitycheck(formfield){
     console.log(formfield.style.borderColor);
 }
 
+function phvaliditycheck(formfield){
+    var patt = new RegExp("[0-9]{8,10}");
+    console.log(patt.test(formfield.value));
+    if(formfield.value ==""){
+        formfield.style.border = "";
+    }
+    else if(patt.test(formfield.value)){
+        formfield.style.border = "2px solid greenyellow";
+        
+    }
+    else{
+        formfield.style.border = "2px solid red";
+    }
+    console.log(formfield.style.borderColor);
+}
+
 function Emailvaliditycheck(formfield){
     var patt = new RegExp(".+@.+[.].+");
     console.log(patt.test(formfield.value));

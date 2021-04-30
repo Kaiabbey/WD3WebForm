@@ -53,6 +53,12 @@ input{
     color: whitesmoke;
 }
 
+input:focus{
+    background-color: #3e676d;
+    height: 90px;
+    transition: height .5s;
+}
+
 .message{
     font-size: 70%;
     height: 140px;
@@ -64,6 +70,12 @@ input{
     background-color: #36555a75;
     outline: none;
     color: whitesmoke;
+}
+
+.message:focus{
+    background-color: #3e676d;
+    height: 200px;
+    transition: height .5s;
 }
 
 form{
@@ -85,13 +97,13 @@ footer{
     grid-row-start: 4;
     grid-row-end: 5;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .flexbox{
     display: flex;
     height: fit-content;
-    margin:10px;
+    margin: 0 50px;
 }
 
 p{
@@ -105,9 +117,10 @@ p1{
 }
 
 .copyright{
-    position: absolute;
-    bottom: -455px;
-    left: 5px;
+    width: fit-content;
+    position: relative;
+    bottom: 140px;
+    right: 210px;
     filter: drop-shadow(3px 3px 3px);
 }
 
@@ -138,9 +151,9 @@ h1{
     height: 30px;
     border-radius: 50%;
     background-color: salmon;
-    position: absolute;
-    right: 10px;
-    bottom: -720px;
+    position: relative;
+    right: -200px;
+    top: 110px;
 }
 
 .kailogo div{
@@ -158,6 +171,15 @@ h1{
     display: none;
     color: skyblue;
     position: absolute;
+}
+
+label::after{
+    content: "*";
+    color: red;
+}
+
+.notreq::after{
+    content: "";
 }
 
 @media only screen and (max-width:450px) {
@@ -179,7 +201,10 @@ h1{
     }
     
     img{
-        display: none;
+        position: fixed;
+        height: 45px;
+        margin-left: 5px;
+        margin-top: 2.5px;
     }
     
     section{
@@ -230,22 +255,32 @@ h1{
     }
 
     .kailogo{
-
-        right: 5px;
-        bottom: 10px;
+        right: -85vw;
+        top: -8px;
     }
 
     .copyright{
-        bottom: 25px;
+        bottom: -5px;
+        right: -5px;
     }
 
     .footerPHEM{
         display: block;
         bottom: 12px;
         left: 62px;
-        font-size:medium;
+        font-size: medium;
     }
 
+    .message{
+        width: 99%;
+        padding: 0;
+        margin: 0;
+    }
+
+    section:hover + video{
+        display: none;
+    }
+    
 
 
 
