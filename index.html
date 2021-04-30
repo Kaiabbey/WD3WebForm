@@ -10,31 +10,46 @@
     <body>
         <header></header>
             <img src="PHEMLOGO.svg" alt="phem logo">
+            <h1>PHEM</h1>
         </header>
         <section>
-            <form>
+            <form onsubmit="return ValidateForm()">
                 <label>First Name</label>
-                <input type="text" pattern="[a-zA-Z-'--]{2,}" placeholder="First Name" oninput="validitycheck(this)">
+                <input type="text" pattern="[a-zA-Z-'--]{2,}" id="first" placeholder="First Name" oninput="validitycheck(this)" required>
+                <div class="Error" id="firstname"></div>
                 <label>Last Name</label>
-                <input type="text" pattern="[a-zA-Z-'--]{2,}" placeholder="Last Name" oninput="validitycheck(this)">
+                <input type="text" pattern="[a-zA-Z-'--]{2,}" id="last" placeholder="Last Name" oninput="validitycheck(this)" required>
+                <div class="Error" id="lastname"></div>
                 <label>Email</label>
-                <input type="text" pattern=".+@.+[.].+" placeholder="Email" oninput="Emailvaliditycheck(this)">
+                <input type="text" pattern=".+@.+[.].+" id="emailinput" placeholder="Email" oninput="Emailvaliditycheck(this)" required>
+                <div class="Error" id="email"></div>
                 <label>Phone Number</label>
-                <input type="number" pattern="[0-9]{8,10}" placeholder="Phone Number" oninput="Phvaliditycheck(this)">
+                <input type="number" pattern="[0-9]{8,10}" id="ph" placeholder="Phone Number" oninput="Phvaliditycheck(this)" required>
+                <div class="Error" id="phone"></div>
                 <label>Organisation</label>
-                <input type="text" placeholder="Organisation">
+                <input type="text" placeholder="Organisation" id="org" required>
+                <div class="Error" id="organisation"></div>
                 <label>Message</label>
-                <textarea class="message" placeholder="Message"></textarea>
+                <textarea class="message" placeholder="Message" id="msg" required></textarea>
+                <div class="Error" id="message"></div>
                 <label>Subject</label>
-                <input type="text" placeholder="Subject">
+                <input type="text" placeholder="Subject" class="subject">
                 <input type="Submit">
             </form>
         </section>
         <video width="320" height="240" autoplay muted loop>
             <source src="WIN_20210429_20_51_04_Pro.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-          </video>
+            Your browser does not support the video tag.
+        </video>
+        <div class="kailogo">
+            <div>KA</div>
+        </div>
         <footer>
+            <div class="copyright">
+                <i class="far fa-copyright"></i>
+                <p1> 2021</p1>
+            </div>
+            <h2 class="footerPHEM">PHEM</h2>
             <div class="flexbox">
                 <i class="far fa-envelope" style="font-size: xx-large;"></i>
                 <p> : Email.smith@gmail.com</p>
@@ -46,8 +61,7 @@
             <div class="flexbox">
                 <i class="fas fa-phone" style="font-size: xx-large;"></i>
                 <p>: 0484698625</p>
-            </div>
-            
+            </div> 
         </footer>
     </body>
 </html>

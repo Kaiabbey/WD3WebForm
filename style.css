@@ -5,7 +5,7 @@ body{
     margin: 0px;
     display: grid;
     grid-template-rows: auto auto auto auto;
-    grid-template-columns: 33vw 34vw 33vw;
+    grid-template-columns: 33vw 33.1vw 33vw;
 }   
 
 header{
@@ -91,11 +91,28 @@ footer{
 .flexbox{
     display: flex;
     height: fit-content;
+    margin:10px;
 }
 
 p{
     font-size: x-large;
     margin: 3px 0 0 5px;
+    color: skyblue;
+}
+
+p1{
+    color: skyblue;
+}
+
+.copyright{
+    position: absolute;
+    bottom: -455px;
+    left: 5px;
+    filter: drop-shadow(3px 3px 3px);
+}
+
+i{
+    color: skyblue;
 }
 
 video{
@@ -108,10 +125,45 @@ video{
     filter: drop-shadow(8px 13px 9px);
 }
 
+h1{
+     display: none;
+     color: skyblue;
+     position: fixed;
+     top: -6px;
+     left: 37vw;
+     filter: drop-shadow(3px 3px 3px black);
+}
+.kailogo{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: salmon;
+    position: absolute;
+    right: 10px;
+    bottom: -720px;
+}
+
+.kailogo div{
+    position: relative;
+    left: 4px;
+    top: 6px;
+    color: #0b2a3f;
+}
+
+.footerPHEM{
+    bottom: 11px;
+    left: 65px;
+    font-size:medium;
+    filter: drop-shadow(3px 3px 3px black);
+    display: none;
+    color: skyblue;
+    position: absolute;
+}
+
 @media only screen and (max-width:450px) {
     body {
-      background-color: red;
-      grid-template-columns: auto auto auto;
+      position: absolute;
+      background: rgb(9,9,121);
     }
 
     label{
@@ -120,7 +172,10 @@ video{
 
     header{
         height: 50px;
-        background-color: slateblue;
+        width: 100vw;
+        background-color: #0b2a3f;
+        margin: 0;
+        filter: drop-shadow( 0px 4px 5px);
     }
     
     img{
@@ -130,10 +185,65 @@ video{
     section{
         width: 100vw;
         padding: 0;
+        margin-top: 50px;
+        margin-bottom: 0;
         grid-column-start: 1;
         grid-column-end: 4;
         grid-row-start: 2;
         grid-row-end: 3;
+        border-radius: 0;
+    }
+
+    input{
+        width: 99%;
+        margin: 15px 0;
+        padding: 0;
+    }
+    
+    footer{
+        flex-direction: column;
+        padding: 0;
+        height: 50px;
+        width: 100vw;
+    }
+
+    h1{
+        display: block;
+    }
+    
+    .subject{
+        display: none;
+    }
+
+    p{
+        font-size: x-large;
+        margin: 3px 0 0 5px;
+        color: skyblue;
+    }
+    
+    i{
+        color: skyblue;
+    }
+
+    .flexbox{
+        display: none;
+    }
+
+    .kailogo{
+
+        right: 5px;
+        bottom: 10px;
+    }
+
+    .copyright{
+        bottom: 25px;
+    }
+
+    .footerPHEM{
+        display: block;
+        bottom: 12px;
+        left: 62px;
+        font-size:medium;
     }
 
 
