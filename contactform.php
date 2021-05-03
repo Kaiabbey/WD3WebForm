@@ -14,3 +14,6 @@ if(isset($_POST["submit"]) ){
     mail($mailTo, $subject, $emailMessage,$headers);
     header("Location: index.php?mailsend");
 }
+else{
+    header("Location: index.php?Failsend");
+}

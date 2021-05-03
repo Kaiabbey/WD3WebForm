@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Flex</title>
+        <meta charset="UTF-8">
+        <title>PHEM</title>
         <link rel="stylesheet" href="style.css">
         <script src="js.js" defer></script>
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -10,10 +11,8 @@
     <body>
         <header></header>
             <img src="PHEMLOGO.svg" alt="phem logo">
-            <h1></h1>
-        </header>
         <section>
-            <form onsubmit="return ValidateForm()">
+            <form  onsubmit="return ValidateForm()">
                 <label>First Name</label>
                 <input type="text" pattern="[a-zA-Z-'--]{2,}" id="first" placeholder="First Name" oninput="validitycheck(this)" required>
                 <div class="Error" id="firstname"></div>
@@ -24,7 +23,7 @@
                 <input type="text" pattern=".+@.+[.].+" id="emailinput" placeholder="Email" oninput="Emailvaliditycheck(this)" required>
                 <div class="Error" id="email"></div>
                 <label>Phone Number</label>
-                <input type="number" pattern="[0-9]{8,10}" id="ph" placeholder="Phone Number" oninput="phvaliditycheck(this)" required>
+                <input type="number" id="ph" placeholder="Phone Number" oninput="phvaliditycheck(this)" required>
                 <div class="Error" id="phone"></div>
                 <label>Organisation</label>
                 <input type="text" placeholder="Organisation" id="org" oninput="validitycheck(this)" required>
@@ -44,7 +43,7 @@
         <footer>
             <div class="copyright">
                 <i class="far fa-copyright"></i>
-                <p1> 2021</p1>
+                <p class="copyyear"> 2021</p>
             </div>
             <h2 class="footerPHEM">PHEM</h2>
             <div class="flexbox">
