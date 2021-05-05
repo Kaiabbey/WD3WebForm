@@ -5,7 +5,8 @@ body{
     margin: 0px;
     display: grid;
     grid-template-rows: auto auto auto auto;
-    grid-template-columns: 33vw 33.1vw 33vw;
+    grid-template-columns: 29vw 42vw 29vw;
+    overflow-x: hidden;
 }   
 
 header{
@@ -32,7 +33,7 @@ section{
     width: 34vw;
     background-color: #3b6f79a2;
     font-size: xx-large;
-    padding: 40px;
+    padding: 4vw;
     margin-bottom: 60px;
     grid-column-start: 2;
     grid-column-end: 3;
@@ -119,9 +120,10 @@ p{
 .copyright{
     width: fit-content;
     position: relative;
-    bottom: 140px;
-    right: 210px;
+    bottom: 0px;
+    right: 110px;
     filter: drop-shadow(3px 3px 3px);
+    display: flex;
 }
 
 i{
@@ -152,7 +154,7 @@ h1{
     border-radius: 50%;
     background-color: salmon;
     position: relative;
-    right: -200px;
+    right: -100px;
     top: 110px;
 }
 
@@ -241,7 +243,7 @@ label::after{
     }
 
     p{
-        font-size: x-large;
+        font-size: large;
         margin: 3px 0 0 5px;
         color: skyblue;
     }
@@ -256,7 +258,7 @@ label::after{
 
     .kailogo{
         right: -85vw;
-        top: -8px;
+        top: -9px;
     }
 
     .copyright{
@@ -266,8 +268,8 @@ label::after{
 
     .footerPHEM{
         display: block;
-        bottom: 12px;
-        left: 62px;
+        bottom: 8px;
+        left: 65px;
         font-size: medium;
     }
 
